@@ -11,6 +11,7 @@ export const  AnimeProvider = ({ children }) => {
             try{
                 const response = await fetch(API_URL);
                 const data = await response.json();
+                console.log(data.data);
                 setAnimes(data.data);
             } catch(err) {
                 console.error(err);
